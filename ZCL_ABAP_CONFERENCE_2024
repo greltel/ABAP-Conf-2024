@@ -112,7 +112,7 @@ CLASS ZCL_ABAP_CONFERENCE_2024 IMPLEMENTATION.
                                                                                   THEN VALUE #( ( <fs_line> ) ) ) ) ).
 
     " &----------------------------------------------------------------------
-    " & Count Internal Tables lines
+    " & Count Internal Table lines
     " &----------------------------------------------------------------------
 
     TYPES: BEGIN OF t_spfli,
@@ -122,8 +122,6 @@ CLASS ZCL_ABAP_CONFERENCE_2024 IMPLEMENTATION.
            tt_spfli TYPE SORTED TABLE OF t_spfli WITH NON-UNIQUE KEY carrid.
 
     DATA lt_spfli TYPE tt_spfli.
-
-    BREAK-POINT.
 
     SELECT FROM spfli
       FIELDS carrid
