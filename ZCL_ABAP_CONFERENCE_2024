@@ -70,7 +70,7 @@ CLASS ZCL_ABAP_CONFERENCE_2024 IMPLEMENTATION.
     WHERE language EQ @syst-langu
     INTO TABLE @lt_lookup.
 
-    DATA(lt_result_lookup) = CORRESPONDING tt_country( lt_original
+    DATA(lt_result_lookup) = CORRESPONDING tt_country( lt_original ##OPERATOR[LT_ORIGINAL]
                                                        FROM lt_lookup
                                                        USING country = country
                                                        MAPPING country_text = countryname ).
